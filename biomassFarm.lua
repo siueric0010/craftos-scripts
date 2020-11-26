@@ -110,6 +110,9 @@ local function bioRestart()
 -- now at the next field, but want to go back
     turtle.back()
     turtle.turnLeft()
+    
+    print("Sleep for 2.5 minutes to wait for biomass to finish")
+    sleep(150)
     for j=1,20 do
         turtle.forward()
         if (j-3) % 4 == 0 then
@@ -178,6 +181,7 @@ parallel.waitForAll(
                 turtle.forward()
                 turtle.suckDown(44) 
 
+                coalCount = turtle.getItemCount(1)
                 -- keep on getting the coal until enough
                 while coalCount < 20 do
                     turtle.suckDown(44) 

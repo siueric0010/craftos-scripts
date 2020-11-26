@@ -135,6 +135,7 @@ parallel.waitForAll(
                 turtle.forward()
                 turtle.suckDown(44) 
 
+                coalCount = turtle.getItemCount(1)
                 -- keep on getting the coal until enough
                 while coalCount < 20 do
                     turtle.suckDown(44) 
